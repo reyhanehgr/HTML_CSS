@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>    
+</head>
+<style>
+     @media (max-width: 768px) {
+      main {
+        font-size: 16px;
+      }
+    }
+    @media (min-width: 769px) {
+      main {
+        font-size: 20px;
+      }
+    }
+    @font-face {
+      font-family: portfolio_font;
+      src: url(Clearlight-lJlq.ttf);
+    }
+    html{
+      scroll-behavior: smooth; 
+    }
+    #img_container{
+        width: 100%;
+        height: 300vr;
+        background-image: url(https://www.grssigns.co.uk/wp-content/uploads/web-Header-Background.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        text-align: center;
+        color: white;
+        border-radius: 20px;
+        margin: 10px auto;
+    }
+    body{
+        overflow-x: hidden;
+        background-color: antiquewhite;
+     }
+    *{
+      font-family: portfolio_font;  
+    }
+    #d1 img{
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: block;
+      margin: 30px auto 0px auto;
+      width: clamp(100px, 20vw, 200px);
+      height: clamp(100px, 20vw, 200px);
+      border: 5px solid white;
+    }
+    #n1{
+      border-radius: 20px;
+      background-color: white;
+      width: 100%;
+      height: 50px;;
+      display: block;
+      margin: 10px auto;      
+    }
+    #u1{
+      list-style: none;       
+      display:flex;          
+      gap: 10%;  
+      justify-content: center; 
+      align-items: center;
+      text-align: center;
+      padding: 10px 0px;   
+       
+      
+    }
+    #u1 a{
+      font-size: 25px;
+      color: black;
+      text-decoration: none;
+    }
+    #u1 a:hover{
+      color: #af654c;
+    }
+    .sections{
+      width: 100%;
+      background-color: white;
+      margin: 10px auto;
+      border-radius: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* افقی */
+      align-items: center;     /* عمودی */
+      font-size: 28px;
+      /*border: 5px solid black;*/
+    }
+    .header2{
+      border: 3px dashed burlywood;
+      border-radius: 20px;
+      width: fit-content; 
+      padding: 10px 10px;
+      box-sizing: border-box;
+    }
+    #pre1{
+      width: 100%;
+      text-align: center;
+    }
+    
+    #t1{
+      width: 95%;
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    th , td{
+      border: 1px solid black;
+    }
+    .t2{
+      background-color: rgb(249, 78, 78);
+      color: white;
+    }
+    .sections #list{
+      width: 100%;
+      align-self: flex-start;
+      text-align: left;
+    }
+    .progress_container{
+      width: 50%;
+      height: 25px;
+      background-color: #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    .progress_container #progress_bar1{
+      width: 90%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    .progress_container #progress_bar2{
+      width: 70%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    .progress_container #progress_bar3{
+      width: 70%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    .progress_container #progress_bar4{
+      width: 40%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    .progress_container #progress_bar5{
+      width: 50%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    .progress_container #progress_bar6{
+      width: 30%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    .progress_container #progress_bar7{
+      width: 30%;
+      height: 100%;
+      background-color: #af654c;
+    }
+    li::marker {
+      content: "➤  "; /* یا هر کاراکتر مثل • ★ ➤ ⬤ ❖ */
+      color: rgb(128, 87, 0);
+      font-size: 16px;
+    }
+    form{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .form_input{
+      display: block;
+      background-color: #ddd;
+      margin: 10px auto;
+      width: 50%;
+      height: 30px;
+      font-size: 30px;
+      border-radius: 10px;
+      border: 2px solid black;
+    }
+    #input_text{
+      background-color: #ddd;
+      margin: 10px auto;
+      border-radius: 10px;
+      font-size: 30px;
+      width: 50%;
+      height: 100px;
+      border: 2px solid black;
+    }
+    .form_input:focus{
+      background-color: white;
+    }
+    #input_text:focus{
+      background-color: white;
+    }
+    #submit{
+      width: 20%;
+      height: 30px;
+      margin: 20px auto;
+      cursor: pointer;
+      box-shadow: 0 10px 6px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      background-color: rgb(228, 137, 0);
+      font-size: 20px;
+    }
+    #social_git{
+    text-decoration: none;
+    color: black; 
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 10px 10px;
+    }
+    #social_in{
+    text-decoration: none;
+    color: #0077B5; 
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 10px 10px;
+    }
+</style>
+<body>
+    <header id="img_container">
+        <div id="d1"><img src="profile1.jpg"/></div>
+        <h1>Reyhaneh Gerami</h1>
+    </header>
+    <nav id="n1">
+      <div id="d2">
+        <ul id="u1">
+          <li><a href="#About_me">About me</a></li>
+          <li><a href="#My_Coding_Schedule">My Coding Schedule</a></li>
+          <li><a href="#My_Skills">My Skills</a></li>
+          <li><a href="#Contact_Me">Contact Me</a></li>
+          <li><a href="#Follow_Me">Follow Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section id="About_me"><div class="sections">
+      <h2 class="header2"><span >About me</span></h2>
+      <pre id="pre1">
+          I’m Reyhaneh, born in 1995. I hold a B.Sc. in Computer Science and an M.Sc. in IT Engineering (E-Commerce).
+          I have experience in customer support and content creation for a web services company, data entry and invoice 
+          processing in the food industry, and sales management and accounting tasks in a cable manufacturing company, 
+          including full responsibility for an e-commerce platform.
+      </pre>
+      </div></section>
+      <section id="My_Coding_Schedule"><div class="sections">
+        <h2 class="header2"><span >My Coding Schedule</span></h2>
+        <table id="t1">
+          <thead>
+            <tr>
+              <th></th><th>Mon</th><th>Tue</th>
+              <th>Wed</th><th>Thu</th><th>Fri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>8-8:30</td><td class="t2">Learn</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>9-10</td><td></td><td class="t2">Practice</td><td></td><td></td><td></td></tr>
+            <tr><td>1-1:30</td><td></td><td></td><td class="t2">Play</td><td></td><td></td></tr>
+            <tr><td>3:45-5</td><td></td><td></td><td></td><td class="t2">Code</td><td></td></tr>
+            <tr><td>6-6:15</td><td></td><td></td><td></td><td></td><td class="t2">Explore</td></tr>
+          </tbody>
+        </table>
+      </div></section>
+      <section id="My_Skills"><div class="sections">
+        <h2 class="header2"><span >My Skills</span></h2>
+        <div id="list"><ul>
+          <li>Microsoft Office</li>
+          <div class="progress_container">
+            <div id="progress_bar1"></div>
+          </div>
+          <li>HTML</li>
+          <div class="progress_container">
+            <div id="progress_bar2"></div>
+          </div>
+          <li>CSS</li>
+          <div class="progress_container">
+            <div id="progress_bar3"></div>
+          </div>
+          <li>Accounting basics</li>
+          <div class="progress_container">
+            <div id="progress_bar4"></div>
+          </div>
+          <li>English</li>
+          <div class="progress_container">
+            <div id="progress_bar5"></div>
+          </div>
+          <li>Github</li>
+          <div class="progress_container">
+            <div id="progress_bar6"></div>
+          </div>
+          <li>SQL</li>
+          <div class="progress_container">
+            <div id="progress_bar7"></div>
+          </div>
+        </div></ul>
+      </div></section>
+      <section id="Contact_Me"><div class="sections">
+        <h2 class="header2"><span >Contact Me</span></h2>
+        <form action="" method="">
+          <input class="form_input" type="text" placeholder=" Name..."/ required>
+          <input class="form_input" type="text" placeholder=" Email..."/ required>
+          <textarea id="input_text" placeholder=" Message..."></textarea>
+          <input id="submit" type="submit" value="Send"/>
+        </form>
+      </div></section>
+      <section id="Follow_Me"><div class="sections">
+        <h2 class="header2"><span >Follow Me</span></h2>
+        <div class="social-icons">
+          <a id="social_git" href="https://github.com/reyhanehgr" title="Visit GitHub Profile" class="icon-link">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a id="social_in" href="https://www.linkedin.com/in/reyhaneh-gerami" target="_blank" class="icon-link">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div></section>
+    </main>
+    <footer></footer>
+</body>
+</html>
