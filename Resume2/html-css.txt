@@ -1,0 +1,436 @@
+----------------------------------------------------------------------------------------------------------------------------------------
+This file contains a complete and responsive resume webpage designed specifically for you.
+ It showcases your professional background, technical skills, education, work experience, 
+ and project contributions in a clean and well-structured layout. The code is written in HTML and CSS,
+ optimized for readability, and designed to be easily viewable on different screen sizes.
+
+Key features include:
+
+A modern, two-column layout for better visual balance
+
+A summary/profile section introducing your core expertise
+
+Clearly separated sections for skills, experience, education, and languages
+
+Highlighted project contributions with bullet points for clarity
+
+Social media links (LinkedIn and GitHub) with respective icons
+
+Styling optimized for both desktop and mobile views
+
+At the end of the file, your academic project ("CloudOptimizer") is also included, ensuring a complete view of your background.
+
+All code is included in one single file to simplify usage, sharing, and integration.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammad Mirzakhani – Resume</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+:root {
+  --header-height: 30vh;
+}
+
+body {
+  background: linear-gradient(135deg, #dfe9f3, #f9fbfc);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.resume {
+  position: relative;
+  padding-left: 3rem;
+  background: white;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: auto;
+  z-index: 1;
+  padding-right: 2rem;
+}
+
+.resume::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 2rem;
+  height: var(--header-height);
+  background-color: #000;
+}
+
+.header {
+  padding-bottom: 1rem;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  height: var(--header-height);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.header h1 span {
+  font-weight: 700;
+  display: block;
+  font-size: 2.8rem;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.name-role h1 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.name-role h1 span {
+  font-weight: 700;
+  display: block;
+  font-size: 2.8rem;
+}
+
+.role {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: left;
+  color: #000;
+  font-weight: 350;
+  gap: 8px;
+  letter-spacing: 1px;
+}
+
+.contact-item .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.contact-item:hover {
+  color: #014b72;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.section p {
+  margin: 0 auto;
+  text-align: left;
+  text-justify: inter-word;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+.job {
+  margin-bottom: 2rem;
+}
+
+.job-title {
+  font-weight: bolder;
+  margin-bottom: 0.3rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid #012a45;
+  color: #222;
+}
+
+.job-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.projects {
+  margin-top: 1.5rem;
+}
+
+.projects h3 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project {
+  margin-bottom: 1rem;
+}
+
+.project strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.project ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.project li {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-height: 25vh;
+  }
+  .title-bar {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .contact {
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .name-role {
+    width: 100%;
+  }
+
+  .contact-item {
+    font-size: 0.7rem;
+    gap: 6px;
+  }
+  .header {
+    padding-bottom: 5rem;
+    margin-bottom: 10rem;
+    padding-top: 2rem;
+    height: var(--header-height);
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+  .role {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+  }
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+
+  .header h1 span {
+    font-weight: 700;
+    display: block;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+
+  </style>
+</head>
+<body>
+  <div class="resume">
+      <!-- Header -->
+      <div class="header">
+        <div class="title-bar">
+          <div class="name-role">
+            <h1>Mohammad <span>Mirzakhani</span>
+            </h1>
+            <div class="role">Senior Java Developer</div>
+          </div>
+          <div class="contact">
+            <a href="https://www.linkedin.com/in/mmirzakhani1993" target="_blank" class="contact-item">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" style="filter: invert(0);" width="24" height="24" alt="LinkedIn" class="icon"> linkedin.com/mmirzakhani1993 </a>
+            <a href="https://github.com/mmirzakhani93" target="_blank" class="contact-item">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" style="filter: invert(0);" width="24" height="24" alt="GitHub" class="icon"> github.com/mmirzakhani93 </a>
+          </div>
+        </div>
+      </div>
+      <!-- 1. Summary -->
+      <div class="section">
+        <h2 style="border-bottom: none;">SUMMARY</h2>
+        <p style="border-left: 3px solid #000; padding-left: 12px; padding-right: 8px; "> Experienced Java Backend Engineer with 4+ years in building scalable, secure web applications. Strong background in Spring Boot, RESTful APIs, and microservices. Holds BSc and MSc in Software Engineering.Focused on clean architecture, performance optimization, and delivering production-ready code. Passionate aboutcontinuous learning, system design, and solving real-world problems through efficient backend solutions. </p>
+      </div>
+      <!-- 2. Education -->
+      <div class="section">
+        <h2>EDUCATION</h2>
+        <p>
+          <strong>MSc Software Engineering</strong>
+          <br>Azad University, South Tehran | 2016 – 19
+        </p>
+        <br>
+        <p>
+          <strong>BSc Software Engineering</strong>
+          <br>Azad University, South Tehran | 2011 – 15
+        </p>
+      </div>
+      <!-- 3. Skills -->
+      <div class="section">
+        <h2>SKILLS</h2>
+        <ul>
+          <li>JavaSE</li>
+          <li>Java EE</li>
+          <li>OOP & Design Patterns</li>
+          <li>Spring Framework</li>
+          <li>Maven</li>
+          <li>Git</li>
+          <li>SQL</li>
+          <li>Elasticsearch</li>
+          <li>RESTful APIs</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>CI/CD</li>
+          <li>Blockchain</li>
+        </ul>
+      </div>
+      <!-- 4. Work Experience -->
+      <div class="section">
+        <h2>WORK EXPERIENCE</h2>
+        <div class="job">
+          <div class="job-title">PROGRAMMER | Maguay | 2021 – PRESENT</div>
+          <p>As a Backend Developer, contributed to healthcare, workflow, and e-commerce projects, focusing on scalable, secure systems that optimized processes, ensured data integrity, and improved performance.</p>
+          <div class="projects">
+            <h3>Key Projects & Contributions</h3>
+            <div class="project">
+              <strong>𝗲𝗦𝗮𝗻𝗮𝘁𝗮𝘁𝗲 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 - 𝗜𝗻𝘁𝗲𝗴𝗿𝗮𝘁𝗲𝗱 𝗠𝗲𝗱𝗶𝗰𝗮𝗹 𝗥𝗲𝗳𝗲𝗿𝗿𝗮𝗹𝘀 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁</strong>
+              <ul>
+                <li>Developed a solution for managing prescriptions and referrals.</li>
+                <li> Enabled secure QR code access for pharmacists and specialists, improving efficiency and patient care.</li>
+                <li>Collaborated with Romanian government ministries.</li>
+                <li>Used blockchain for secure user registration, authentication, and access control, ensuring compliance with health data regulations.</li>
+              </ul>
+            </div>
+            <div class="project">
+              <strong>𝗘𝗨.𝗚𝗢𝗩.𝗥𝗢 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 - 𝗖𝗶𝘁𝗶𝘇𝗲𝗻𝘀 𝗗𝗶𝗴𝗶𝘁𝗮𝗹 𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁</strong>
+              <ul>
+                <li> Developed backend services for secure digital document storage.</li>
+                <li>Integrated with eSanatate for seamless access to medical referrals and prescriptions.</li>
+              </ul>
+            </div>
+            <div class="project">
+              <strong>𝗣𝗥𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗔 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 - 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀 𝗳𝗼𝗿 𝗣𝗿𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗠𝗲𝗱𝗶𝗰𝗮𝗹 𝗥𝗲𝗳𝗲𝗿𝗿𝗮𝗹𝘀</strong>
+              <ul>
+                <li>Developed backend services to simplify prescription and referral issuance.</li>
+                <li>Ensured platform efficiency and security.</li>
+                <li>Improved healthcare accessibility with fast, reliable document management.</li>
+              </ul>
+            </div>
+            <div class="project">
+              <strong>𝗔𝗦𝗜𝗚𝗡𝗢 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 - 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀 𝗮𝗻𝗱 𝗕𝗣𝗠 𝗣𝗿𝗼𝗰𝗲𝘀𝘀 𝗘𝗻𝗵𝗮𝗻𝗰𝗲𝗺𝗲𝗻𝘁</strong>
+              <ul>
+                <li>Optimized backend services and implemented new BPM workflows.</li>
+                <li>Streamlined task automation, improving efficiency and collaboration.</li>
+                <li>Reduced manual tasks and increased productivity.</li>
+              </ul>
+            </div>
+            <div class="project">
+              <strong>𝗕𝗹𝗼𝗰𝗸𝗰𝗵𝗮𝗶𝗻-𝗯𝗮𝘀𝗲𝗱 𝗘-𝗰𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 - 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗳𝗼𝗿 𝗕𝟮𝗫 𝗠𝗮𝗿𝗸𝗲𝘁</strong>
+              <ul>
+                <li>Developed the Bengee platform for bidding and auction wins.</li>
+                <li>Used blockchain for transaction transparency and security.</li>
+                <li>Utilized blockchain tokens for payments.</li>
+                <li>Integrated Stripe for payment solutions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="job">
+          <div class="job-title">JAVA DEVELOPER | Bahran | 2018 – 2020</div>
+          <p>As a Backend Developer, I contributed to the development of a platform for managing and monitoring internal network infrastructure.</p>
+          <div class="projects">
+            <h3>Key Projects & Contributions</h3>
+            <div class="project">
+              <ul>
+                <li>Focused on leveraging SMTP protocols for efficient network communication and monitoring.</li>
+                <li>Built backend services for seamless tracking and performance analysis of network activities.</li>
+                <li> Designed and implemented a desktop application integrated with the backend platform, allowing users to easily view reports and monitor network performance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 5. Project -->
+      <div class="section">
+        <h2>PROJECT</h2>
+        <div class="job">
+          <div class="job-title">CloudOptimizer</div>
+          <div class="job-date">Associated with Azad University (IAU)</div>
+          <p> An approach to optimize Load Balancing in Cloud Computing using the Emperor Penguins Colony metaheuristic algorithm. </p>
+        </div>
+      </div>
+      <!-- 6. Language -->
+      <div class="section">
+        <h2>LANGUAGES</h2>
+        <ul>
+          <li>English – Professional Proficiency</li>
+          <li>Persian – Native</li>
+        </ul>
+      </div>
+      <!-- Footer -->
+      <div class="footer"> Designed & Coded by Reyhaneh G. 2025. </div>
+    </div>
+</body>
+</html>
