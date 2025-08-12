@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prescription.css" />
+    <title>Rețetă medicală</title>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Header: Serie / Număr / MF etc + QR -->
+      <div class="row">
+        <div class="col-70">
+          <div class="line-small">
+            <span>Serie</span>
+            <span class="dots dots"><!--enter serie here--></span>
+            <span class="space-30"></span>
+            <span>Număr</span>
+            <span class="dots dots"><!--enter Număr here--></span>
+          </div>
+          <h4>1. Unitate medicală</h4>
+          <div class="dots fill"><!--Unitate medicală--></div>
+          <div class="dots fill"><!--Unitate medicală--></div>
+          <div class="block">
+            <div>
+              <span>CUI</span>
+              <span class="dots"><!--enter CUI here--></span>
+              <span class="space-30"></span>
+              <span>Stat membru: RO</span>
+            </div>
+            <div>
+              <span>CAS-contract / convenție</span>
+              <span class="dots"></span> / <span class="dots dots-s"></span>
+            </div>
+            <div>
+              <span>Telefon/Fax medic prescriptor (cu prefix de țară)</span>
+              <span class="dots"><!--enter Telefon/Fax medic prescriptor here--></span>
+            </div>
+            <div>
+              <span>Email medic prescriptor</span>
+              <span class="dots"><!--enter Email here--></span>
+            </div>
+            <div>
+              <div style="display: inline;">
+                <span class="cb"><!--give cb black background color to mark the box--></span></span>
+                <span>Aprobat comisie</span>
+              </div>
+              <span class="dots dots-s"><!--enter Aprobat comisie here--></span><span>/</span><span class="dots dots-s"><!--enter Aprobat comisie here--></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-30">
+          <div class="checks">
+            <div>
+              <span class="cb"></span>MF
+            </div>
+            <div>
+              <span class="cb"></span>AMBULATORIU
+            </div>
+            <div>
+              <span class="cb"></span>SPITAL
+            </div>
+            <div>
+              <span class="cb"></span>ALTELE <span class="dots"><!--enter ALTELE comisie here--></span>
+            </div>
+            <div>
+              <span class="cb"></span>MF-MM
+            </div>
+          </div>
+          <div class="qr"></div>
+        </div>
+      </div>
+      <!-- Section 2 -->
+      <div class="row section2">
+        <div class="col-50 left-border">
+          <h4>2. Unitate <span class="right">FO/RC <span class="dots dots-s"></span>
+            </span>
+          </h4>
+          <div class="block">
+            <div>
+              <span>Nume</span>
+              <span class="dots"></span>
+            </div>
+            <div>
+              <span>Prenume</span>
+              <span class="dots"></span>
+            </div>
+            <div class="gridline">
+              <div class="cid-section">
+                <div class="labels">
+                  <div>CID/CNP</div>
+                  <div>CE</div>
+                  <div>PASS</div>
+                </div>
+                <div class="boxes">
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                </div>
+              </div>
+            </div>
+            <div class="gridline">
+              <div class="grd">
+                <div class="left-sex">
+                  <span>Sexul</span>
+                  <span class="space-5"></span>
+                  <span class="cb"></span> M <span class="space-15"></span>
+                  <span class="cb"></span> F
+                </div>
+                <div class="right-citizen">
+                  <span>Cetățenia</span>
+                  <span class="sq"></span>
+                  <span class="sq"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-50">
+          <table class="ticks">
+            <tr>
+              <td>
+                <span class="cb"></span> Salariat
+              </td>
+              <td>
+                <span class="cb"></span> Revoluționar
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Co-asigurat
+              </td>
+              <td>
+                <span class="cb"></span> Handicap
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Liber profesionist
+              </td>
+              <td>
+                <span class="cb"></span> PNS <span class="dots"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Copil (&lt;18 ani)
+              </td>
+              <td>
+                <span class="cb"></span> Ajutor social
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Elev / Ucenic
+              </td>
+              <td>
+                <span class="cb"></span> Șomer
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb" style="border: #f6f6f6;"></span> Student (18-26 ani)
+              </td>
+              <td>
+                <span class="cb"></span> Personal construcții
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Gravidă / Lehuză
+              </td>
+              <td>
+                <span class="cb"></span> Card European (CE)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Pensionar
+              </td>
+              <td>
+                <span class="cb"></span> Acorduri internaționale
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> Veteran
+              </td>
+              <td>
+                <span class="cb"></span> Alte categorii <span class="dots"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="cb"></span> 0-700 lei/lună
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- Section 3 -->
+      <div class="row section3" style="padding-bottom: 20px;">
+        <h4>3. Diagnostic/Cod Diag.</h4>
+        <div class="dots fill"></div>
+        <div class="dots fill"></div>
+      </div>
+      <!-- Section 4 -->
+      <div class="section">
+        <div class="line-small">
+          <h4 class="inline">4. Dată prescrire</h4>
+          <span class="dots dots-s"></span>
+          <span>/</span>
+          <span class="dots dots-s"></span>
+          <span>/</span>
+          <span class="dots dots-s"></span>
+        </div>
+        <table class="rx-table">
+          <thead>
+            <tr>
+              <th class="th-rot">poz iția</th>
+              <th class="th-code">Cod diag.</th>
+              <th class="th-code">Tip diag.</th>
+              <th>Denumire comună internațională / Denumire comercială <br />Formă farmaceutică / Concentrație </th>
+              <th class="th-ds">D.S.</th>
+              <th class="th-ut">Cantitate <br />(UT) </th>
+              <th class="th-days">Număr zile <br />tratament </th>
+              <th class="th-ref">% preț <br />ref. </th>
+              <th class="th-list">Listă</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nr">1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr">2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr">3</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr">4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr">5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr">6</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr">7</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Section 5 -->
+      <div class="section">
+        <!--<div class="box tall"></div>-->
+        <table class="rx-table-justif">
+          <thead>
+            <tr>
+              <th class="th-rot-justif">poz iția</th>
+              <th class="th-just"><h4 class="inline"></h4>5. Justificare medicală prescriere denumire comercială</hr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nr-justif"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr-justif"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr-justif"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr-justif"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="nr-justif"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Signatures -->
+      <div class="row">
+        <div class="col-70">
+          <div class="sign">
+            <div>Nume și parafă medic prescriptor <span class="dots wide"></span> / <span class="dots dots-s"></span>
+            </div>
+            <div class="space-10"></div>
+            <div>Semnătura medic prescriptor <span class="dots wide"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-30">
+          <div class="stamp">
+            <div>L. S. Unitste</div>
+          </div>
+        </div>
+        <div>
+          <strong><i>Folosește-ți drepturile!</i></strong>
+        </div>
+        <div>
+          <strong><i>Alege să fii corect informat!</i></strong>
+        </div>
+        <div><i>La întocmirea rețetei, solicitați medicului precizări privind prețurile medicamentelor recomandate.</i></div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <div class="tiny-note"> Acest document a fost înregistrat cu numărul <span class="dots dots"></span><span>/</span><span class="dots dots"></span>
+            în Sistemul Informatic pentru Prescripții Electronice al CNAS. <br /> Acest document a fost generat și
+             semnat electronic conform prevederilor Legii nr. 455/2001 și ale Hotărârii Guvernului nr. 1259/2001 <br />
+              de către:  <span class="dots"></span> cu Certificatul numărul<span class="dots"></span>
+              din data <span class="dots"></span> emis de <span class="dots"></span> -fumizor de servicii de certificare a creditst conform legii.<br>
+              Acest document a fost imprimat folosind aplicația <span class="dots"></span>dezvoltată de<span class="dots dots-l"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
